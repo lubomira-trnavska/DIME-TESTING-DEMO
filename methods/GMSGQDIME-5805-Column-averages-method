@@ -1,0 +1,14 @@
+from pyspark.sql import DataFrame
+from pyspark.sql.functions import avg
+from pyspark.sql.types import NumericType
+ 
+def average_values(df: DataFrame) -> dict:
+
+    numeric_cols = [field.name for field in df.schema.fields if isinstance(field.dataType, NumericType)]
+ 
+    if not numeric_cols:
+        return {}
+
+avg_row = df.select([avg(col).alias(col) for col in numeric_cols]).collect()[0]
+ 
+return {col: avg_row[col] for col in numeric_cols}

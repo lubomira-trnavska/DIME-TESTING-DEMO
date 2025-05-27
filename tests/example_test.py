@@ -1,4 +1,4 @@
-import unittest
+import pytest
 from methods import example_method
 
 ## test with two positive numbers
@@ -15,6 +15,5 @@ def test_add_two_numbers_negative():
 
 ## test raising exception if the input is not a nuber
 def test_add_two_numbers_invalid_args():
-    test_case = unittest.TestCase()
-
-    test_case.assertRaises(TypeError, example_method.add_two_numbers, '11', 7)
+    with pytest.raises(TypeError):
+        example_method.add_two_numbers('11', 7)

@@ -1,0 +1,5 @@
+Implement a method null_percentage that accepts a Spark DataFrame and a column name, returning the percentage of rows that have null values in the specified column.Implement a method null_percentage that accepts a Spark DataFrame and a column name, returning the percentage of rows that have null values in the specified column.
+
+- use PySpark functions
+- write a respective unit tests for the method
+- avoid using ChatGPT, use documentation only

@@ -21,7 +21,7 @@ def max_values(df):
     return result
 
 #TESTS
-# 2. Test function
+
 def test_max_values():
     # Sample test data
     data = [

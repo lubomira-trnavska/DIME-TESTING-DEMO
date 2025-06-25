@@ -18,7 +18,7 @@ def max_values(df):
                 max_val = float(max_val)
 
             result[field.name] = max_val
-    print(result)
+    #print(result)
     return result
     
 
@@ -112,7 +112,7 @@ def duplicates_max_values():
 
     result = max_values(df)
     assert result == expected, f"Test duplicates_max_values failed. Expected: {expected}, got: {result}"
-    print("👍test_max_values passed!")
+    print("👍duplicates_max_values passed!")
 
 #CALL THE TEST
 test_max_values()
